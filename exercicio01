@@ -1,27 +1,32 @@
-# -*- coding: utf-8 -*-
+n = input("Digite um numero inteiro e positivo para o tamanho da sequencia: ")
+lista = []
 
-def main():
-    n = input("Digite um número inteiro e positivo para o tamanho da sequência: ")
-    lista = []
+while not isinstance(n, int): # verifica se n eh int
+    n = input("[ERRO] Digite um numero INTEIRO: ")
 
-    while not isinstance(n, int):
-        n = input("[ERRO] Digite um número INTEIRO: ")
-    
-    while n <= 0:
-        n = input("[ERRO] Digite um número POSITIVO: ")
-    
-    n = int(n)
+while n <= 0: # verifica se n eh positivo
+    n = input("[ERRO] Digite um numero POSITIVO: ")
 
-    for i in range(0, n):
-        num = input("Digite o número {}º da sequência: ".format(i+1))
+for i in range(0, n):
+    num = input("Digite o numero {} da sequencia: ".format(i+1))
 
-        while not isinstance(n, int):
-            num = input("[ERRO] Digite um número INTEIRO: ")
+    while not isinstance(n, int): # verifica o num eh int
+        num = input("[ERRO] Digite um numero INTEIRO: ")
 
-        lista.append(num)
-    
-    lista.sort()
-    
-    print(lista)
+    lista.append(num)
 
-main()
+# logica para tirar numeros repetidos
+i = 0
+while i < len(lista):
+    j = i + 1 
+    while j < len(lista):
+        if lista[i] == lista[j]: # verificando se ha algum elemento repetido posteriormente
+            lista.pop(j) 
+        else:
+            j += 1
+    i += 1
+
+lista.sort()
+
+for each_num in lista:
+    print(each_num)
