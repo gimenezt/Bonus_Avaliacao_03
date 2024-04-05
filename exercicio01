@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+
+def main():
+    n = input("Digite um número inteiro e positivo para o tamanho da sequência: ")
+    lista = []
+
+    while not isinstance(n, int):
+        n = input("[ERRO] Digite um número INTEIRO: ")
+    
+    while n <= 0:
+        n = input("[ERRO] Digite um número POSITIVO: ")
+    
+    n = int(n)
+
+    for i in range(0, n):
+        num = input("Digite o número {}º da sequência: ".format(i+1))
+
+        while not isinstance(n, int):
+            num = input("[ERRO] Digite um número INTEIRO: ")
+
+        lista.append(num)
+    
+    lista.sort()
+    
+    print(lista)
+
+main()
