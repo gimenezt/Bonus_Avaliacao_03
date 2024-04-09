@@ -1,14 +1,11 @@
-n = input("Digite um numero inteiro e positivo para o tamanho da sequencia: ")
+n = int(input("Digite um numero inteiro e positivo para o tamanho da sequencia: "))
 lista = []
-
-while not isinstance(n, int): # verifica se n eh int
-    n = input("[ERRO] Digite um numero INTEIRO: ")
 
 while n <= 0: # verifica se n eh positivo
     n = input("[ERRO] Digite um numero POSITIVO: ")
 
 for i in range(0, n):
-    num = input("Digite o numero {} da sequencia: ".format(i+1))
+    num = input(f"Digite o numero {i+1} da sequencia: ")
 
     while not isinstance(n, int): # verifica o num eh int
         num = input("[ERRO] Digite um numero INTEIRO: ")
