@@ -1,10 +1,9 @@
 def insere_ordenada(lista: list[int], x:int) -> list:
     idx = 0
 
-    # verifica a qual numero x eh maior para coloca-lo em sequencia
-    for item in lista:
-        if x > item:
-            idx = lista.index(item) + 1
+    # encontra o idx correto para inserção
+    while idx < len(lista) and x > lista[idx]:
+        idx += 1
 
     nova_lista = lista[:idx] + [x] + lista[idx:]
 
