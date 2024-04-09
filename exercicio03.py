@@ -12,9 +12,10 @@ for i in range(0, n):
 
     lista.append(num)
 
-for i in range(0, len(lista)):
-    for j in range(0, len(lista)):
-        if lista[i] + lista[j] == k and i != j:  # evita contar o mesmo numero duas vezes
-            existe_soma = "S"
+if len(lista) > 0: # verifica se lista nao esta vazia
+    for i in range(0, len(lista)):
+        for j in range(0, len(lista)):
+            if lista[i] + lista[j] == k and i != j:  # evita contar o mesmo numero duas vezes
+                existe_soma = "S"
 
 print(existe_soma)
