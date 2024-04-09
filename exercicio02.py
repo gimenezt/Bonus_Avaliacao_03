@@ -1,4 +1,4 @@
-def insere_ordenada(lista, x):
+def insere_ordenada(lista: list[int], x:int) -> list:
     idx = 0
 
     # verifica a qual numero x eh maior para coloca-lo em sequencia
